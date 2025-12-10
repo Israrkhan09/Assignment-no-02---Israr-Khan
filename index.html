@@ -1,14 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Selector</title>
 
+    <style>
+        .modern-form {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: stretch;
+            width: 320px;
+            margin: 20px auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            animation: fadeInUp 0.7s ease;
+        }
 
-    <script src="app.js"></script>
-  </body>
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .modern-form select {
+            padding: 12px 16px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            background: #fff;
+            transition: .3s;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .modern-form select:hover {
+            border-color: #1a73e8;
+            box-shadow: 0 0 10px rgba(26,115,232,0.3);
+        }
+
+        .modern-form button {
+            padding: 12px 22px;
+            background: #1a73e8;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .modern-form button:hover {
+            background: #155bb5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .main-text {
+            text-align: center;
+        }
+
+        /* Result Box Styling */
+        #result {
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f9f9f9;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            display: none;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .spec-title {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .spec-item {
+            background: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .spec-item b {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="modern-form">
+    <h1 class="main-text">Mobile Brands</h1>
+    
+    <select id="brand">
+        <option>Select Brand</option>
+    </select>
+
+    <select id="model">
+        <option>Select Model</option>
+    </select>
+
+    <button id="searchBtn">Search</button>
+</div>
+
+<!-- Result Box -->
+<div id="result"></div>
+
+<script src="app.js"></script>
+</body>
 </html>
