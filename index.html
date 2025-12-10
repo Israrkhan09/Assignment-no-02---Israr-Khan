@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   <style>
+    .modern-form {
+        background: white;
+        padding: 25px 30px;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;   /* ⭐ COLUMN LAYOUT */
+        gap: 15px;
+        align-items: stretch;
+        width: 300px;
+        margin: 20px auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        animation: fadeInUp 0.7s ease;
+    }
+
+    @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .modern-form select {
+        padding: 12px 16px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 2px solid #ddd;
+        background: #fff;
+        transition: .3s;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .modern-form select:hover {
+        border-color: #1a73e8;
+        box-shadow: 0 0 10px rgba(26,115,232,0.3);
+    }
+
+    .modern-form button {
+        padding: 12px 22px;
+        background: #1a73e8;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    .modern-form button:hover {
+        background: #155bb5;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+    .main-text
+    {
+        text-align: center;
+    }
+</style>
+
+<div class="modern-form">
+    <h1 class="main-text">Mobile Brands</h1>
+    <select id="brand">
+        <option>Select Brand</option>
+    </select>
+
+    <select id="model">
+        <option>Select Model</option>
+    </select>
+
+    <button>Search</button>
+</div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
